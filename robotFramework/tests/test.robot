@@ -75,8 +75,8 @@ Test With Add Link
     Do Another Thing
     Add Links    @{LINKS}
 #    You can also add one link (default type is Defect)
-    Add Link    http://ya.ru
-    Add Link    http://ya.ru    type=Issue
+    Add Link    http://google.com
+    Add Link    http://google.com    type=Issue
     Add Link    ${SIMPLE_LINK}[url]
     [Teardown]  Teardown
 
@@ -113,9 +113,9 @@ Template with embedded arguments
     1 + 2    ${3}
 
 Тест на русском
-    [Setup]  Сетап
-    Вот мой крутой кейворд
-    [Teardown]  Тирдаун
+    [Setup]  Setup
+    My best keyword
+    [Teardown]  Teardown
 
 *** Keywords ***
 Do Something
@@ -144,11 +144,11 @@ The result of ${calculation} should be ${expected}
     ${result}    Evaluate    1 + 1
     Should Be Equal    2     2
 
-Сетап
-    Log    Я сетап
+Setup
+    Log    I'm setup
 
-Тирдаун
-    Log    Я тирдаун
+Teardown
+    Log    I'm teardown
 
-Вот мой крутой кейворд
-    Log    Привет, мир!
+My best keyword
+    Log    Hello world!!!
