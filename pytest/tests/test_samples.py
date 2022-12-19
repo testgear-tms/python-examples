@@ -28,7 +28,7 @@ class TestClass1:
     ])
     @pytest.mark.tag
     def test_authorization(self, test_suite, labels, url, link_type, link_title):
-        testgear.addLink(url="http://best-tms.test-gear.io/", title="Тестируемый продукт")
+        testgear.addLink(url="http://best-tms.test-gear.io/", title="Tested product")
         with testgear.step('Log in the system', 'system authentication'):
             pass
         with testgear.step('Create a project', 'the project was created'):
@@ -57,7 +57,7 @@ class TestClass2:
     @testgear.labels('E2E', 'File')
     @pytest.mark.mag
     def test_load_files(self):
-        testgear.addLink(url="http://best-tms.test-gear.io/", title="Тестируемый продукт")
+        testgear.addLink(url="http://best-tms.test-gear.io/", title="Tested product")
         authorization('admin', 'Qwerty123')
         with testgear.step('Attachments'):
             testgear.addAttachments("123", True)
